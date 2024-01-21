@@ -403,8 +403,8 @@
                 </svg>
             </button>
             <p class="title-form">Leave your contacts and we will call you back</p>
+            
             <form class="modal-form">
-
                 <div class="modal-fild">
                     <label for="user-name" class="modal-label">Name</label>
                     <div class="modal-input-wrap">
@@ -459,21 +459,23 @@
                         placeholder="Text input"
                     ></textarea>  
                 </div> 
-                    <input 
+                <div class="user-privacy-info">
+                    <input class=" visually-hidden"
                         type="checkbox" 
-                        name="privacy-policy" 
-                        id="privacy-policy" 
+                        name="user-privacy" 
+                        id="user-privacy" 
                         class="check-input visually-hidden"
                         value="true"
                     />    
-                    <label for="privacy-policy" class="check-text">
-                        <span>
-                            <svg class="check-ico" width="16" height="16" >
+                    <label for="user-privacy" class="check-text">
+                        <span class="span-for-user-privacy">
+                            <svg class="check-ico" width="10" height="8" >
                                 <use href="./images/icons.svg#icon-check-1"></use>
                             </svg> 
                         </span> I accept the terms and conditions of the&nbsp; 
                         <a href=""> Privacy Policy </a>
                     </label>
+                </div>    
                 <button type="submit" class="btn-modal">Send</button>
             </form>
         </div>
