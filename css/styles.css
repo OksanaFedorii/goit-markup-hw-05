@@ -557,64 +557,73 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
+    padding: 72px 24px 24px 24px;
     width: 408px;
     min-height: 584px;
-    padding: 24px;
     border-radius: 4px;
     background: #FCFCFC;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    position: fixed;
 }
 
 .modal-close-btn {
+    display: flex;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     margin-left: auto;
-    margin-bottom: auto; 
+    margin-bottom: 24px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
     background-color: #E7E9FC;
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.10); 
-    border: none;
-    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.10); 
     justify-content: center;
-    align-items: center;
-    margin-bottom: 24px;
-    outline: none;
+    align-items: center; 
+    padding: 0;
+    /* outline: none; */
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:focus,
+.modal-close-btn:active {
     background-color: #404BBF;
     border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-.modal-icon:hover,
-.modal-icon:focus {
-    fill: #FFF;
-} 
+.modal-close-btn:hover + .modal-icon:hover,
+.modal-close-btn:focus + .modal-icon:active,
+.modal-close-btn:active + .modal-icon:focus {
+    fill:#FFF;
+}
 
 .modal-icon {
-    fill: #2E2F42;
-}  
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+.modal-icon { 
+    fill: #434455;
+}
 
 .title-form {
     color:#2E2F42;
