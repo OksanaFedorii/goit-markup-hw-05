@@ -843,13 +843,14 @@ img {
     padding: 8px 24px;
     justify-content: center;
     align-items: center;
-    gap: 16px;
     border-radius: 4px;
     background: #4D5AE5;
     border: none;
+    min-width: 165px;
     color: #FFF;
     text-align: center;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.50; 
@@ -860,7 +861,11 @@ img {
 .footer-form-btn:hover {
     background: #404BBF;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}    
+} 
+
+.btn-icon {
+    margin-left: 16px; 
+}
 
 .footer-form {
     display: inline-flex;
