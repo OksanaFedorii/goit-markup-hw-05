@@ -581,7 +581,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: fixed;
+    position: absolute;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -611,9 +612,11 @@ img {
     border: none;
 }
 
-.modal-close-btn:hover + .modal-icon:hover,
-.modal-close-btn:focus + .modal-icon:active,
-.modal-close-btn:active + .modal-icon:focus {
+.modal-close-btn:hover {
+    fill:#FFF;
+}
+
+.modal-close-btn:focus {
     fill:#FFF;
 }
 
@@ -643,21 +646,20 @@ img {
     border: 1px solid  rgba(46, 47, 66, 0.40);
     background-color: transparent;
     width: 100%;
-    padding-left: 35px;
+    padding-left: 38px;
     outline: transparent;
     color: #2E2F4266;
     font-size: 12px;
     font-weight: 400;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-input:focus {
     border: 1px solid  #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus + .modal-icons {
     fill: #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -683,13 +685,14 @@ img {
 .btn-modal:focus,
 .btn-modal:hover {
     background: #404BBF;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .modal-label {
+    display: block; 
     color:#8E8F99;
     font-size: 12px;
+    line-height: 1.17;
     font-weight: 400;
     line-height: 1.16px;
     letter-spacing: 0.04em;
@@ -706,6 +709,7 @@ img {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-fild:not(:last-child) {
@@ -718,7 +722,6 @@ img {
 
 .modal-input:focus + .modal-icons {
     fill: #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text {
@@ -731,15 +734,16 @@ img {
     color: #2E2F4266;
     font-size: 12px;
     font-weight: 400;
-    padding-left: 16px;
-    padding-top: 8px;
+    padding: 8px 16px; 
     resize: none; 
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    line-height: 1.17; 
+    letter-spacing: 0.04em;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .modal-text:focus {
     border: 1px solid  #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text::placeholder {
