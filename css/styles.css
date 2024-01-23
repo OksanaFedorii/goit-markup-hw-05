@@ -781,7 +781,6 @@ img {
 }
 
 .check-text span {
-    display: inline-flex;
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4); 
@@ -793,6 +792,11 @@ img {
     fill: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.check-text-span {
+    display: inline-flex;
+}
+
 
 
 .check-input:checked + .check-text span {
